@@ -10,13 +10,16 @@ public class HashMapRunner
 		for(String wd:myStr)
 		{
 			Integer value=1;
-			if(myMap.get(wd)==null)
+			if(!wd.equals("avoidable"))
 			{
-				myMap.add(wd,value);
-			}
-			else
-			{
-				myMap.add(wd,++value);
+			      if(myMap.get(wd)==null)
+			      {
+				       myMap.add(wd,value);
+			      }
+			      else
+			      {
+			        	myMap.add(wd,++value);
+		          }
 			}
 		}
 		System.out.println(myMap);
